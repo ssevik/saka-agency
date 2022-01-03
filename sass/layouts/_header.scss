@@ -1,0 +1,85 @@
+.header {
+  &__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: minmax(rem(76), auto);
+    align-items: center;
+
+    @media screen and (max-width: em(920)) {
+      grid-template-columns: auto rem(60);
+    }
+  }
+  &__logo {
+    padding-right: rem(20);
+  }
+}
+
+.header-nav {
+  @media screen and (max-width: em(920)) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(30);
+  }
+
+  &__link {
+    display: inline-block;
+
+    padding-top: rem(10);
+    padding-right: rem(10);
+    padding-bottom: rem(10);
+    padding-left: rem(10);
+
+    font-size: rem(14);
+    line-height: 1.5;
+
+    @include transition(color);
+
+    &:hover {
+      color: $second;
+    }
+  }
+}
+
+.header__button {
+  padding-left: rem(20);
+
+  @media screen and (max-width: em(920)) {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  display: none;
+
+  @media screen and (max-width: em(920)) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: transparent;
+    border: 1px solid $main;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $accent;
+      border-color: transparent;
+    }
+
+    &__svg {
+      fill: $main;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.testimonial-body {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 570px);
+  align-items: center;
+  column-gap: rem(43);
+
+  @media screen and (max-width: em(920)) {
+    grid-template-columns: minmax(rem(290), rem(570));
+
+    row-gap: rem(20);
+  }
+}
+
+.testimonial-content {
+  display: grid;
+  grid-template-columns: minmax(auto, rem(366));
+  grid-template-rows: 1fr auto;
+  grid-auto-flow: column;
+
+  &__title {
+    margin-bottom: rem(10);
+  }
+
+  &__text {
+    grid-column-start: span 2;
+
+    font-size: rem(18);
+    line-height: prc(35, 18);
+  }
+}
+
+.testimonial-slider {
+  padding-top: rem(37);
+  padding-right: rem(44);
+  padding-bottom: rem(56);
+  padding-left: rem(26);
+
+  border-radius: $br;
+  background-color: $iconBg;
+
+  @media screen and (max-width: em(560)) {
+    padding-right: rem(20);
+    padding-left: rem(20);
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  &__svg {
+    justify-self: end;
+
+    margin-bottom: rem(21);
+
+    width: 80px;
+    height: 68px;
+    fill: rgba($main, 0.5);
+
+    @media screen and (max-width: em(560)) {
+      width: 40px;
+      height: 26px;
+    }
+  }
+
+  &__name {
+    display: grid;
+    grid-template-columns: 55px auto;
+    column-gap: rem(20);
+
+    margin-bottom: rem(20);
+
+    &--img {
+      grid-row: 1 / span 2;
+      border-radius: 50%;
+    }
+
+    &--title {
+      margin-bottom: rem(5);
+
+      font-weight: 600;
+      font-size: rem(18);
+      line-height: prc(22, 18);
+    }
+
+    &--company {
+      grid-column: 2 / 3;
+
+      font-weight: 300;
+      font-size: rem(14);
+      line-height: prc(21, 14);
+    }
+  }
+
+  &__text {
+    padding-bottom: rem(25);
+
+    font-weight: 300;
+    font-size: rem(16);
+    line-height: prc(31, 16);
+  }
+}
+
+.swiper-horizontal {
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: #8e8f93;
+  }
+  .swiper-pagination-bullets {
+    bottom: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $main;
+  }
+}

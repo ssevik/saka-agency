@@ -1,0 +1,14 @@
+@function rem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+@function em($value) {
+  $emValue: ($value / 16) + em;
+  @return $emValue;
+}
+
+@function prc($pxOne, $pxTwo) {
+  $prcValue: ($pxOne / $pxTwo) * 100%;
+  @return $prcValue;
+}

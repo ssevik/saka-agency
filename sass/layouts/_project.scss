@@ -1,0 +1,37 @@
+.project-desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  margin-bottom: rem(50);
+
+  @media screen and (max-width: em(600)) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: rem(20);
+  }
+
+  &__title {
+    span {
+      display: block;
+    }
+  }
+
+  &__links {
+    align-self: end;
+    justify-self: end;
+    padding-left: rem(20);
+  }
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 540px));
+  justify-content: center;
+  gap: $gap;
+
+  &__img {
+    border-radius: $br;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,53 @@
+.btn {
+  display: inline-block;
+
+  position: relative;
+
+  padding-top: rem(12);
+  padding-right: rem(27);
+  padding-bottom: rem(12);
+  padding-left: rem(27);
+
+  min-width: rem(157);
+  min-height: rem(53);
+
+  background-color: $accent;
+  border-radius: rem(10);
+
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: 1.5;
+  text-transform: capitalize;
+
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  &:before,
+  &:after {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 5px;
+    opacity: 0;
+    transition-duration: 300ms;
+    transition-property: opacity;
+  }
+
+  &:before {
+    bottom: 100%;
+    background: radial-gradient(ellipse at 50% 150%, $main 0%, rgba(0, 0, 0, 0) 80%);
+  }
+
+  &:after {
+    top: 100%;
+    background: radial-gradient(ellipse at 50% -50%, $main 0%, rgba(0, 0, 0, 0) 80%);
+  }
+
+  &:hover:before,
+  &:hover:after {
+    opacity: 1;
+  }
+}

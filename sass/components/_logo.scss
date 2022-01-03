@@ -1,0 +1,14 @@
+.logo {
+  color: $main;
+  font-weight: 800;
+
+  &--big {
+    font-size: rem(30);
+    line-height: 1.5;
+  }
+
+  &--min {
+    font-size: rem(24);
+    line-height: prc(36, 24);
+  }
+}

@@ -1,0 +1,15 @@
+.title {
+  font-weight: 800;
+  font-size: rem(50);
+  line-height: prc(70, 50);
+
+  @media screen and (max-width: em(560)) {
+    font-size: rem(30);
+  }
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: rem(18);
+  line-height: prc(27, 18);
+}

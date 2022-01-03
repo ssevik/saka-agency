@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,KAAK,AAAC,CACJ,WAAW,CAAE,GAAG,CAMjB,AAJE,AAAD,UAAM,AAAC,CACL,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,IAAI,CAClB",
+    "sources": [
+        "../sass/components/components.scss",
+        "../sass/components/_logo.scss",
+        "../sass/components/_btn.scss"
+    ],
+    "names": [],
+    "file": "components.min.css"
+}

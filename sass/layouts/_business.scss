@@ -1,0 +1,40 @@
+.business {
+  background-color: $iconBg;
+}
+
+.business-content {
+  margin-bottom: rem(50);
+
+  text-align: center;
+
+  &__title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: rem(36);
+
+    max-width: rem(647);
+  }
+}
+
+.business-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, rem(239)));
+  justify-content: center;
+  gap: $gap;
+
+  &__item {
+    border-right: 2px solid $main;
+    border-left: 2px solid $main;
+  }
+
+  &__num {
+    text-align: center;
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: prc(40, 28);
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

@@ -1,0 +1,28 @@
+body {
+  color: $main;
+  background-color: $bg;
+  font-family: 'Poppins', sans-serif;
+  font-size: rem(16); //18px  clamp(18px, 3vw, 30px)
+  line-height: 1.75; //28
+}
+
+.container {
+  max-width: em(1140); //1140
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: rem(50);
+  padding-bottom: rem(50);
+}
+
+// @media screen and (max-width: em(920))
+
+// @media screen and (max-width: em(560))
+
+// @media screen and (max-width: em(600))
+
+// @media screen and (max-width: em(768))

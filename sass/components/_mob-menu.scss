@@ -1,0 +1,48 @@
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding-top: rem(80);
+  padding-left: rem(50);
+
+  width: 100vw;
+  height: 100vh;
+
+  color: $main;
+  background-color: $bg;
+
+  transform: translateX(100%);
+
+  @include transition(transform);
+}
+
+.close-menu {
+  position: absolute;
+  top: rem(20);
+  right: rem(20);
+  &__svg {
+    fill: $main;
+  }
+}
+
+.mob-menu.is-open {
+  transform: translateX(0);
+}
+
+.mob-menu__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: rem(20);
+
+  margin-bottom: rem(30);
+
+  .mob-menu__item--link {
+    display: inline-block;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+
+    font-size: rem(28);
+    line-height: 1.5;
+  }
+}

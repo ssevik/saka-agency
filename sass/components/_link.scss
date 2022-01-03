@@ -1,0 +1,28 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+
+  color: $second;
+  font-size: rem(14);
+  line-height: prc(20, 14);
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent;
+
+    .link__svg {
+      fill: $accent;
+    }
+  }
+
+  &__svg {
+    margin-left: rem(20);
+    width: 20px;
+    height: 20px;
+    fill: $second;
+
+    @include transition(fill);
+  }
+}

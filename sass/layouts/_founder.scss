@@ -1,0 +1,57 @@
+.founder {
+  @media screen and (max-width: em(768)) {
+    display: none;
+  }
+}
+
+.founder__title {
+  margin-bottom: rem(50);
+
+  text-align: center;
+}
+
+.founder-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 540px));
+  gap: $gap;
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__cont {
+    align-self: end;
+
+    &--title {
+      font-weight: 500;
+      font-size: rem(18);
+      line-height: prc(27, 18);
+    }
+
+    &--text {
+      font-weight: 300;
+      font-size: rem(14);
+      line-height: prc(26, 14);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cont--right {
+  padding-right: rem(11);
+  text-align: right;
+}
+
+.cont--left {
+  padding-left: rem(11);
+}
+
+.cont--pad {
+  padding-bottom: rem(95);
+}
